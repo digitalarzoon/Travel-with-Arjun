@@ -1,0 +1,22 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Inquiries: anyone can submit, authenticated can read/update
+    match /inquiries/{inquiryId} {
+      allow create: if true;
+      allow read, update, delete: if true;
+    }
+    
+    // Settings: readable by all, writable by authenticated
+    match /settings/{docId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Packages and destinations
+    match /packages/{pkgId} {
+      allow read: if true;
+      allow write: if true;
+    }
+  }
+}

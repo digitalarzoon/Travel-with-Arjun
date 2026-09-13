@@ -1,0 +1,6 @@
+{
+  "name": "Travel with Arjun - Travel Around The World & Nepal",
+  "description": "Peak Adventures. Endless Horizons. Exclusive travel packages to the world's most breathtaking destinations and the Himalayas. Pricing in NPR with 24/7 support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
