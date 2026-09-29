@@ -26,3 +26,49 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
+
+/* Responsive elastic 'spring' pop transform for interactive WhatsApp button (#floating-whatsapp-btn) */
+@keyframes pop-bounce {
+  0% {
+    transform: scale(0.86);
+  }
+  28% {
+    transform: scale(1.28);
+  }
+  50% {
+    transform: scale(0.92);
+  }
+  72% {
+    transform: scale(1.06);
+  }
+  88% {
+    transform: scale(0.985);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-pop {
+  animation: pop-bounce 0.48s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Subtle 'slide-in-up' entrance animation for #floating-whatsapp-btn on page load */
+@keyframes slide-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(36px) scale(0.8);
+  }
+  65% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-slide-in-up {
+  animation: slide-in-up 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.35s backwards;
+}

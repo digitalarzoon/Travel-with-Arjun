@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, Heart, ShieldCheck, User } from 'lucide-react';
+import { Phone, Mail, MapPin, Heart, User } from 'lucide-react';
 import type { AgencySettings } from '../types';
 import { CurrencySelector } from './CurrencySelector';
 
@@ -77,18 +77,6 @@ export const TopBar: React.FC<TopBarProps> = ({
             <span className="hidden sm:inline text-xs text-slate-500 font-medium">Currency:</span>
             <CurrencySelector variant="pill" showRateTip />
           </div>
-
-          {/* Admin Panel Link */}
-          {onOpenAdmin && (
-            <button
-              onClick={onOpenAdmin}
-              className="flex items-center gap-1 text-slate-500 hover:text-slate-900 transition-colors cursor-pointer"
-              title="Admin Portal"
-            >
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-              <span>Admin</span>
-            </button>
-          )}
 
           {/* User Sign In */}
           <button
