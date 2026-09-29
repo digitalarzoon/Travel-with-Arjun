@@ -16,6 +16,7 @@ import { ReviewsSection } from './components/ReviewsSection';
 import { NewsletterSection } from './components/NewsletterSection';
 import { Footer } from './components/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
+import { RecentBookingPopup } from './components/RecentBookingPopup';
 
 // Modals
 import { TourDetailModal } from './components/TourDetailModal';
@@ -298,6 +299,12 @@ export default function App() {
 
       {/* 14. Floating WhatsApp Action Button */}
       <FloatingWhatsApp settings={settings} />
+
+      {/* 15. Small Recent Trip Booking Popup Notification */}
+      <RecentBookingPopup
+        packages={packages}
+        onSelectTour={(pkg) => setSelectedTour(pkg)}
+      />
 
       {/* MODALS */}
       {/* Tour Detail Modal */}

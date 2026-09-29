@@ -72,3 +72,19 @@
 .animate-slide-in-up {
   animation: slide-in-up 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.35s backwards;
 }
+
+/* Subtle toast slide-in for small recent booking popup */
+@keyframes toast-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.94);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-toast-slide {
+  animation: toast-slide-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
